@@ -1,5 +1,12 @@
 <?php
 
+function azal_theme_support(){
+    //adds dynamic title tag support
+    add_theme_support('title-tag');
+}
+
+add_action('after_setup_theme', 'azal_theme_support');
+
 function azal_register_styles(){
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('azal-style', get_template_directory_uri() . "/style.css", array('azal-bootstrap'), $version, 'all');
