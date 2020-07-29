@@ -40,4 +40,33 @@ function azal_register_scripts(){
 
 add_action('wp_enqueue_scripts', 'azal_register_scripts');
 
+
+function azal_widget_areas(){
+    register_sidebar(
+        array(
+            'before_title'=>'',
+            'after_title'=>'',
+            'before_widget'=>'',
+            'after_widget'=>'',
+            'name' =>'Sidebar Area',
+            'id' => 'sidebar-1',
+            'description' => 'Sidebar Widget Area'
+        )
+    );
+
+    register_sidebar(
+        array(
+            'before_title'=>'',
+            'after_title'=>'',
+            'before_widget'=>'',
+            'after_widget'=>'',
+            'name' =>'Footer Area',
+            'id' => 'footer-1',
+            'description' => 'Footer Widget Area'
+        )
+    );
+}
+
+add_action('widgets_init', 'azal_widget_areas');
+
 ?>
