@@ -4,7 +4,11 @@
             <span class="date"><?php the_date(); ?></span>
 
             <?php 
-                the_tags('<span class="tag"><i class="fa fa-tag"></i>', '</span><span class="tag"><i class="fa fa-tag"></i>',' </span>');
+                the_tags(
+                            '<span class="tag"><i class="fa fa-tag"></i>', 
+                            '</span><span class="tag"><i class="fa fa-tag"></i>',
+                            ' </span>'
+                        );
             ?>
 
            
